@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles = {
+articleOne: {
     title:'Article One| Neha Jeevan',
     heading:'Article One',
     date:'Sep 5, 2016',
@@ -19,8 +20,38 @@ var articleOne = {
             <p>
                 This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
             </p>`
+},
+articleTwo: {
+        title:'Article One| Neha Jeevan',
+    heading:'Article One',
+    date:'Sep 5, 2016',
+    content:    `
+            <p>
+                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
+            </p>
+            <p>
+                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
+            </p>
+            <p>
+                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
+            </p>`
+},
+articleThree: {
+        title:'Article One| Neha Jeevan',
+    heading:'Article One',
+    date:'Sep 5, 2016',
+    content:    `
+            <p>
+                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
+            </p>
+            <p>
+                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
+            </p>
+            <p>
+                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
+            </p>`
+}
 };
-
 function createTemplate(data){
     var title = data.title;
     var date = data.date;
