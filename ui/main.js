@@ -1,12 +1,22 @@
 var button = document.getElementById("counter");
-var counter = 0;
 button.onclick = function(){
-    //Make request to counter end point
+    //Create a request object
+    var request = new XMLHttpRequest();
     
     //Capture the response & store in variable
+    request.onreadystatechange = function(){
+        if(request.readyState == XMLHttpRequest.DONE)
+        {
+            //Do something
+            if(request.status == 200){
+                var counter = request.responseText;
+                var span = document.getElementById("count");
+                span.innerHTML = counter.toString();
+            }
+        }
+    };
     
-    //Render the variable to span
-    counter+=1;
-    var span = document.getElementById("count");
-    span.innerHTML = counter.toString();
+    //Make a request
+    request.open('GET','http://nehajeevan28.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
