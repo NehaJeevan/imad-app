@@ -22,33 +22,21 @@ var articles = {
             </p>`
 },
 'article-two': {
-        title:'Article One| Neha Jeevan',
-    heading:'Article One',
+        title:'Article Two| Neha Jeevan',
+    heading:'Article Two',
     date:'Sep 5, 2016',
     content:    `
             <p>
-                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
-            </p>
-            <p>
-                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
-            </p>
-            <p>
-                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
+                This is content for article two.
             </p>`
 },
 'article-three': {
-        title:'Article One| Neha Jeevan',
-    heading:'Article One',
+        title:'Article Three| Neha Jeevan',
+    heading:'Article Three',
     date:'Sep 5, 2016',
     content:    `
             <p>
-                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
-            </p>
-            <p>
-                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
-            </p>
-            <p>
-                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
+                This is content for article three.
             </p>`
 }
 };
