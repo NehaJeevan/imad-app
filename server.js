@@ -14,42 +14,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var articles = {
-'article-one': {
-    title:'Article One| Neha Jeevan',
-    heading:'Article One',
-    date:'Sep 5, 2016',
-    content:    `
-            <p>
-                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
-            </p>
-            <p>
-                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
-            </p>
-            <p>
-                This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.This is content for article one.
-            </p>`
-},
-'article-two': {
-        title:'Article Two| Neha Jeevan',
-    heading:'Article Two',
-    date:'Sep 5, 2016',
-    content:    `
-            <p>
-                This is content for article two.
-            </p>`
-},
-'article-three': {
-        title:'Article Three| Neha Jeevan',
-    heading:'Article Three',
-    date:'Sep 5, 2016',
-    content:    `
-            <p>
-                This is content for article three.
-            </p>`
-}
-};
-
 function createTemplate(data){
     var title = data.title;
     var date = data.date;
@@ -116,7 +80,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/articles/:articleName', function (req, res) {
-  pool.query("SELECT * FROM article WHERE title = '" + req.params.articleName + "'", function(err,result){
+  pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function(err,result){
       if(err){
           res.status(500).send(err.toString());
       }
